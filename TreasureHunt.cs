@@ -1,3 +1,5 @@
+using System;
+
 internal class ProjectFindAllTreasures
 {
     static void Main(string[] args)
