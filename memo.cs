@@ -87,6 +87,8 @@ internal class Prompt
             int[] ints1 = { 2, 4, 5 }; // Массив с неопределенным количеством элементов, которые можно добавлять до бесконечности
             int[] ints2 = new int[5] { 1, 2, 3, 4, 5 }; // Массив с заданным количеством элементов, максимальное количество которых не должно превышаться 
 
+            Console.WriteLine(System.Array.IndexOf(ints1, 2)); // Выводит индекс элемента 2 в массиве ints1
+
 
         }
         // Многомерные массивы
@@ -126,7 +128,7 @@ internal class Prompt
             Console.WriteLine(exampleList.Count); // Count = Length, Выводит количество элементов списка
             
             Console.WriteLine(exampleList.Contains(13)); // Проверка на наличие элемента 13. Выводит True/False
-            Console.WriteLine(exampleList.IndexOf(13)); // Выводит индекс элемента 13
+            Console.WriteLine(exampleList.IndexOf(13)); // Выводит индекс элемента 13. Если не находит его, выводит -1
             
             Console.WriteLine(exampleList[0]); // Выводит первый элемент списка
             Console.WriteLine(exampleList[^1]); // Выводит последний элемент списка
