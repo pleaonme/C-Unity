@@ -110,6 +110,18 @@ internal class Prompt
 
         }
 
+        // List
+        { 
+            List<int> exampleList = new List<int>(); // Инициализация списка с неопредленным количеством элементов с типом int
+
+            exampleList.Add(13); // Добавляем нвоый элемент в список
+
+            exampleList.Remove(13); // Удаляем элемент из списка по его значению
+            exampleList.RemoveAt(0); // Удаляем элемент из списка по его индексу
+            
+            Console.WriteLine(exampleList.Count); // Count = Length, Выводит количество элементов списка
+        }
+
 
 
         // Активация языковых стандартов Кириллицы в консоли (если не работает само)
