@@ -4,11 +4,11 @@ public class CharMovement : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public float walkSpeed = 5f;
-    public float sprintSpeed = 9f;
-    public float crouchSpeed = 2.5f;
-    public float jumpHeight = 2f;
-    public float gravity = -9.81f;
+    [SerializeField] private float walkSpeed = 5f;
+    [SerializeField] private float sprintSpeed = 9f;
+    [SerializeField] private float crouchSpeed = 2.5f;
+    [SerializeField] private float jumpHeight = 2f;
+    [SerializeField] private float gravity = -9.81f;
 
     private CharacterController controller;
     private Vector3 velocity;
@@ -16,7 +16,7 @@ public class CharMovement : MonoBehaviour
     private bool isCrouching = false;
 
     private float originalHeight;
-    public float crouchHeight = 1.0f;
+    private float crouchHeight = 1.0f;
 
     void Start()
     {
