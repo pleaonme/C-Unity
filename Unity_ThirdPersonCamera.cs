@@ -5,12 +5,13 @@ public class ThirdPersonCamera : MonoBehaviour
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
-    public Transform target;            // Ссылка на игрока
-    public Transform cameraTransform;   // Ссылка на Main Camera
+    [SerializeField] private Transform target;            // Ссылка на игрока
+    [SerializeField] private Transform cameraTransform;   // Ссылка на Main Camera
 
-    public float distance = 4.0f;       // Расстояние камеры от игрока
-    public float sensitivity = 2.0f;    // Чувствительность мыши
-    public Vector2 pitchLimits = new Vector2(-40f, 75f); // Ограничения по вертикали
+    [SerializeField] private float distance = 4.0f;       // Расстояние камеры от игрока
+    [SerializeField] private float sensitivity = 2.0f;    // Чувствительность мыши
+    
+    private Vector2 pitchLimits = new Vector2(-40f, 75f); // Ограничения по вертикали
 
     private float yaw = 0f;
     private float pitch = 0f;
