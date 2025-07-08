@@ -25,6 +25,11 @@ public class Enums : MonoBehaviour
     
         string currentModeName = currentMode.ToString();
         Debug.Log(currentModeName); // Выводит "MultiPlayer" если currentMode был SinglePlayer
+
+        foreach (GameMode mode in System.Enum.GetValues(typeof(GameMode))) // Перебираем все значения перечисления GameMode
+        {
+            Debug.Log($"GameMode: {mode}, Value: {(int)mode}");
+        }
     
     }
 
