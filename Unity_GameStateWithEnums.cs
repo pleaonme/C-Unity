@@ -10,6 +10,24 @@ public class Enums : MonoBehaviour
         GameOver    // Игра окончена
     }
 
+    private enum GameMode
+    {
+        SinglePlayer, // Однопользовательский режим
+        MultiPlayer   // Многопользовательский режим
+    }
+    
+    private void Start()
+    {
+        GameMode currentMode = GameMode.SinglePlayer;
+        Debug.Log((int)currentMode); // Выводит 0 для SinglePlayer и 1 для MultiPlayer
+    
+        currentMode++; // Переход к следующему элементу Enum
+    
+        string currentModeName = currentMode.ToString();
+        Debug.Log(currentModeName); // Выводит "MultiPlayer" если currentMode был SinglePlayer
+    
+    }
+
     private GameState GetGameState()
     {
         if (IsMainMenu())
