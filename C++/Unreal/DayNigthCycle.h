@@ -8,22 +8,18 @@ UCLASS()
 class YOURGAME_API ADayNightCycle : public AActor
 {
     GENERATED_BODY()
-    
-public:    
+
+public:
     ADayNightCycle();
 
 protected:
-    virtual void BeginPlay() override;
-
-public:    
     virtual void Tick(float DeltaTime) override;
 
+public:
+    
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DayNight")
-    float DayDuration; // Длительность суток в секундах
+    float RotationSpeed; // Скорость вращения солнца (градусов в секунду)
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "DayNight")
-    class ADirectionalLight* SunLight; // Directional Light который нужно вращать
-
-private:
-    float TimeAccumulator;
+    class ADirectionalLight* SunLight; // Directional Light для вращения
 };
