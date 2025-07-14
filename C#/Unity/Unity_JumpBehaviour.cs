@@ -8,16 +8,32 @@
 
 private Rigidbody rb;
 
-void FixedUpdate() {
-  if(Input.GetKeyDown(KeyCode.Space)) {
-    if(IsGrounded()) {
-      rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse);
-    }
-  }
+void Update() 
+{
+  CheckJump();
 }
 
-private bool IsGrounded() {
-  bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+private void CheckJump()
+{
+    if (Input.GetKeyDown(KeyCode.Space))
+    {
+        if (IsGrounded())
+        {
+            rb.AddForce(Vector3.up * jumpVelocity, ForceMode.Impulse); // Rigidbody force to make Player jump
+        }
+    }
+}
 
-  return isGrounded;
+private bool IsGrounded()
+{
+    bool isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+    if (isGrounded && GetComponent<Rigidbody>().linearVelocity.y < 0) // Check if not falling
+    {
+        Vector3 vel = GetComponent<Rigidbody>().linearVelocity;
+        vel.y = 0;
+        GetComponent<Rigidbody>().linearVelocity = vel; // Reset velocity
+    }
+
+    return isGrounded;
 }
