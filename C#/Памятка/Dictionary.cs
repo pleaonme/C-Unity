@@ -12,6 +12,7 @@ public class MainClass
         };
 
         shopItems.Add("Melon", 4); // Add a new item to the end of the Dictionary
+                                   // .Remove deletes the item as well as in the List
 
         shopItems["Orange"] = 3; // Reassign the value by using the key
 
