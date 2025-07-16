@@ -11,9 +11,24 @@ public class MainClass
             { "Orange", 5 }
         };
 
+        shopItems.Add("Melon", 4); // Add a new item to the end of the Dictionary
+
         foreach (var item in shopItems)
         {
-            Console.WriteLine($"Item: {item.Key}");
+            Console.WriteLine($"Item: {item.Key}, Value: {item.Value}"); // Print every item in Dictionary
+        }
+
+
+        if(shopItems.ContainsKey("Banana") {
+            Console.WriteLine("Banana is available in the shop."); // If contains "Banana" key
+        } else {
+            Console.WriteLine("Banana is not available in the shop.");
+        }
+
+        if(shopItems.TryGetValue("Apple", out int appleValue){
+            Console.WriteLine($"Apple is available with a value of {appleValue}."); // If contains "Apple" + receive output value
+        } else {
+            Console.WriteLine("Apple is not available in the shop.");
         }
 
     }
