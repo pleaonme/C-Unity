@@ -6,6 +6,8 @@ actionStack.Push("Action_One"); // The first assigned value will be on the botto
 actionStack.Push("Action_Two"); // The last assigned vallue will be on the top of the Stack, grabbed as the first
 
 Console.WriteLine(actionStack.Pop()); // Take the value from the top of the Stack (Action_Two)
+Console.WriteLine(actionStack.Peek()); // Look at the item on the top but don't remove it (Action_One)
+Console.WriteLine(actionStack.Count); // Count of elements (1)
 
 // Useful for some sort of Undo system, where's the last action is the one to be Undone
 
@@ -19,5 +21,7 @@ playerQueue.Enqueue("Player2");
 playerQueue.Enqueue("Player3"); // Add the last one - it will be the last one to be grabbed out
 
 Console.WriteLine(playerQueue.Dequeue()); // "Player1" will be dequeued (removed)
+Console.WriteLine(playerQueue.Peek()); // (Player2)
+Console.WriteLine(playerQueue.Count); // (2)
 
 // Useful for making Player lists, or wait queue and etc.
