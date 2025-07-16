@@ -13,6 +13,8 @@ public class MainClass
 
         shopItems.Add("Melon", 4); // Add a new item to the end of the Dictionary
 
+        shopItems["Orange"] = 3; // Reassign the value by using the key
+
         foreach (var item in shopItems)
         {
             Console.WriteLine($"Item: {item.Key}, Value: {item.Value}"); // Print every item in Dictionary
