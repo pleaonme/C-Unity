@@ -61,61 +61,7 @@ internal class Prompt
             int v = rand.Next(0, 10); // Подбираем рандомное число в промежутке от 0 до 10 и записываем в переменную v
                                       // 0 - включительно, 10 - не включительно
         }
-        // Работа с консолью
-        {
-            Console.SetCursorPosition(2, 3); // задаем позицию курсору (впоследствии сбросится из-за функции Console.Clear();
-            Console.ForegroundColor = ConsoleColor.White; // меняем цвет текста в консоли
-            Console.BackgroundColor = ConsoleColor.DarkRed; // меняем цвета фона текста в консоли
-            Console.Clear(); // очищаем консоль
-            Console.WindowHeight = 50; // меняем высоту окна консоли 
-            Console.WindowWidth = 50; // меняем ширину консоли
-            Console.WriteLine("Hey! How are you doing today?\nHello! I'm good, and you?"); // \n делает перенос строки на следующую
-
-            string message = "jastin timberlake";
-            Console.WriteLine(message.ToLower()); // приводим наше сообщение к нижнему регистру
-            Console.WriteLine(message.ToUpper()); // приводим наше сообщение к верхнему регистру
-
-
-            Console.ReadKey();
-            Console.Clear();
-        }
-        // Одномерные массивы
-        {
-            int[] ints = new int[10]; /* int[] - обозначение одномерного массива
-                                       * ints - название массива
-                                       * int[10] - количество элементов в массиве */
-            int[] ints1 = { 2, 4, 5 }; // Массив с неопределенным количеством элементов, которые можно добавлять до бесконечности
-            int[] ints2 = new int[5] { 1, 2, 3, 4, 5 }; // Массив с заданным количеством элементов, максимальное количество которых не должно превышаться 
-
-            Console.WriteLine(System.Array.IndexOf(ints1, 2)); // Выводит индекс элемента 2 в массиве ints1
-
-
-        }
-        // Многомерные массивы
-        {
-            int[,] ints = new int[3, 5]; /* int[,] - обозначение многомерного массива
-                                          * ints - название массива
-                                          * int[3, 5] - 3 - в представлении многомерного массива как таблицы это "строка"
-                                          *             5 - в представлении многомерного массива как таблицы это "столбец" */
-
-            int[,] ints1 =
-            {
-                { 2, 3, 4},
-                { 7, 1, 5 }
-            };
-
-            int[,] ints2 = new int[2, 4]
-            {
-                {2 , 3, 4, 5},
-                { 9, 12, 13, 40 }
-            };
-
-        }
-
-        // Активация языковых стандартов Кириллицы в консоли (если не работает само)
-        {
-            Console.InputEncoding = Encoding.Unicode;
-            Console.OutputEncoding = Encoding.Unicode;
+        
         }
         // Горячие клавиши
         {
