@@ -1,3 +1,10 @@
+// Usually, we don't create our own delegates and just use the buil-in:
+// Action - can receive values
+// Func - can receive values and return values
+// Predicate - returns bool value
+
+
+
 using System;
 
 class Program
